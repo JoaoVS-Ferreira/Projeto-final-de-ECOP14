@@ -1,3 +1,4 @@
+/Jo√£o Vitor Souza Ferreira 
 #include <pic18f4520.h>
 #include "bits.h"
 #include "config.h"
@@ -42,7 +43,7 @@ void luzes() {
 
 void leTeclado(void) {
     if ((kpRead() != tecla) && (kpReadKey!=0)) { //checa se apertou tecla
-        tecla = kpRead(); //recebe antigo endereÁo
+        tecla = kpRead(); //recebe antigo endere√ßo
         switch (kpReadKey()) { //recebe valor da tecla
             case 'U': // somar
                 ssdUpdate();
@@ -70,8 +71,8 @@ void leTeclado(void) {
                 break;
             case 's': //prox
                 luzes(); //chama rgb
-                pos1++; //troca a posiÁ„o no vetor de numeros
-                geraconta(); //chama funÁ„o para gerar novo desafio
+                pos1++; //troca a posi√ß√£o no vetor de numeros
+                geraconta(); //chama fun√ß√£o para gerar novo desafio
                 tempo = 0; //reseta timer
                 break;
             default:
@@ -83,12 +84,12 @@ void leTeclado(void) {
 
 
 int geraconta() {
-    switch (op) { //gera a equaÁ„o apÛs apertar prox
+    switch (op) { //gera a equa√ß√£o ap√≥s apertar prox
         case 0:
-            gabarito = 8; //gabarito da equaÁ„o
+            gabarito = 8; //gabarito da equa√ß√£o
             lcdCommand(L_CLR); //limpa display
-            lcdString("4 ? 2 = 8"); //imprime equaÁ„o na forÁa bruta para economizar tempo e recursos
-            op = 1; //proxima equaÁ„o
+            lcdString("4 ? 2 = 8"); //imprime equa√ß√£o na for√ßa bruta para economizar tempo e recursos
+            op = 1; //proxima equa√ß√£o
             break;
         case 1:
             gabarito = 3;
