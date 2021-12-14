@@ -1,4 +1,4 @@
-/João Vitor Souza Ferreira 
+//João Vitor Souza Ferreira 
 #include <pic18f4520.h>
 #include "bits.h"
 #include "config.h"
